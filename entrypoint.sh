@@ -13,7 +13,7 @@ SOCKS5_PORT="${SOCKS5_PORT:-1080}"
 SOCKS5_USERNAME="${SOCKS5_USERNAME:-}"
 SOCKS5_PASSWORD="${SOCKS5_PASSWORD:-}"
 SOCKS5_UDP_MODE="${SOCKS5_UDP_MODE:-udp}"
-
+SOCKS5_PIPELINE="${SOCKS5_PIPELINE:-false}"
 LOG_LEVEL="${LOG_LEVEL:-warn}"
 
 config_file() {
@@ -30,6 +30,7 @@ socks5:
   address: '${SOCKS5_ADDR}'
   port: ${SOCKS5_PORT}
   udp: '${SOCKS5_UDP_MODE}'
+  pipeline: ${SOCKS5_PIPELINE}
   mark: ${MARK}
 EOF
 
